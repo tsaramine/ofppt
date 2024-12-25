@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="quiz app, quiz with timer, application de quiz, application éducative, test de connaissances, application mobile de quiz, jeux éducatifs, quiz chronométré, créer un quiz interactif, quiz en ligne">
+    <meta name="description" content="Découvrez une application de quiz interactive avec un timer intégré pour tester vos connaissances et défier vos amis. Idéale pour l'apprentissage, les jeux éducatifs et les compétitions en ligne. Simple, rapide et engageant !">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responesive.css">
+    <link rel="icon" href="images/icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--font_from_google-->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Quiz</title>
+</head>
+<body>
+
+    <nav>
+
+
+
+      <div class="logo"><a href="">QUIZ<i class="fa-solid fa-gamepad"></i></a></div>
+      <ul class="menu">
+        <li><a href="">home</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">about me</a></li>
+        <li><button id="toggle-theme">Theme</button></li>
+      </ul>
+
+
+
+      <button class="btn-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </nav>
+
+
+
+
+
+
+
+
+
+  <div class="game">
+
+
+    <div class="startbox">
+      <h2>wellcome to the quiz</h2>
+      <button id="start">start</button>
+    </div>
+
+
+
+
+    <div class="rules" style="display: none;">
+      <ol start="1">
+        <li>click start to start</li>
+        <li>you have just one choise</li>
+        <li>there's no beck</li>
+        <li>in the fin you will tike your point</li>
+      </ol>
+      <div class="buttons">
+        <button id="start1">start</button><button id="back">go back</button>
+      </div>
+    </div>
+
+
+
+    <div class="quitions" id="quition1" style="display: none;">
+      <div class="time-step-titel">
+        <div class="timer" id="timer"><span id="timer">Time: 15s</span></div>
+        <div class="title">les't goo</div> 
+        <div class="progress" id="progress">quition 1 from 4</div>
+      </div>
+      <div class="quition">
+        <div class="legend">click on the right answer</div>
+        <div id="button1" class="divqui" data-correct="false"> html is the best langage script</div>
+        <div id="button1" class="divqui" data-correct="true">javascript is so bad for wibsite</div>
+        <div id="button1" class="divqui" data-correct="false">ghizlan is the best teacher in hassania</div>
+        <div id="button1" class="divqui" data-correct="false">hello world</div>
+      </div>
+      <button id="next1">next</button>
+    </div>
+
+    
+    <div class="quitions" id="quition2"   style="display: none;">
+      <div class="time-step-titel">
+        <div class="timer" id="timer"><span id="timer">Time: 15s</span></div>
+        <div class="title">les't goo</div> 
+        <div class="progress" id="progress">quition 2 from 4</div>
+      </div>
+      <div class="quition">
+        <div class="legend" data-correct="false">click on the right answer</div>
+        <div class="divqui" data-correct="false"> html is the best langage script</div>
+        <div class="divqui" data-correct="false">javascript is so bad for wibsite</div>
+        <div class="divqui" data-correct="false">ghizlan is the best teacher in hassania</div>
+        <div class="divqui" data-correct="true">hello world</div>
+      </div>
+      <button id="next2">next</button>
+    </div>
+
+
+
+
+
+
+
+
+    
+    <div class="quitions"  id="quition3"  style="display: none;">
+      <div class="time-step-titel">
+        <div class="timer" id="timer"><span id="timer">Time: 15s</span></div>
+        <div class="title">les't goo</div> 
+        <div class="progress" id="progress">quition 3 from 4</div>
+      </div>
+      <div class="quition">
+        <div class="legend" data-correct="false">click on the right answer</div>
+        <div class="divqui" data-correct="false"> html is the best langage script</div>
+        <div class="divqui" data-correct="false">javascript is so bad for wibsite</div>
+        <div class="divqui" data-correct="false">ghizlan is the best teacher in hassania</div>
+        <div class="divqui" data-correct="true">hello world</div>
+      </div>
+      <button id="next3">next</button>
+    </div>
+
+
+
+
+
+
+
+
+
+    
+    <div class="quitions" id="quition4"  style="display: none;" >
+      <div class="time-step-titel">
+        <div class="timer" id="timer"><span id="timer">Time: 15s</span></div>
+        <div class="title">les't goo</div> 
+        <div class="progress" id="progress">quition 4 from 4</div>
+      </div>
+      <div class="quition">
+        <div class="legend" data-correct="false">click on the right answer</div>
+        <div class="divqui" data-correct="false"> html is the best langage script</div>
+        <div class="divqui" data-correct="false">javascript is so bad for wibsite</div>
+        <div class="divqui" data-correct="false">ghizlan is the best teacher in hassania</div>
+        <div class="divqui" data-correct="true">hello world</div>
+      </div>
+      <button id="finish">finish</button>
+    </div>
+
+
+
+<div id="bad" class="finishbox">
+
+</div>
+
+
+
+
+
+
+
+
+    
+
+  </div> 
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <marquee behavior="" direction="">© 2024 All Rights Reserved - Mohamed Amine El Hadani - Morocco.</marquee>
+  </footer> 
+    <script src="javascript/script.js"></script>
+</body>
+</html>

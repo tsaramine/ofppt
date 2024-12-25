@@ -1,0 +1,241 @@
+:root{
+  --primary:#00ff00;
+  --secondary:#190dfa;
+  --dark:#000000;
+  --third:rgba(0, 232, 193, 0.255);
+  --white:#000000;
+  --bg:rgb(255, 255, 255);
+  --logo:rgb(255, 255, 255);
+}
+:root.active{
+  --primary:#ffb300;
+  --secondary:#fa0d0d;
+  --dark:#a52d01e0;
+  --third:rgba(170, 5, 5, 0.255);
+  --white:#ff0000;
+  --bg:rgba(255, 255, 255, 0.933);
+  --logo:rgb(11, 255, 35);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    text-transform: capitalize;
+    font-family: "Bangers", system-ui;
+    color: var(--white);
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background:linear-gradient(var(--secondary),var(--primary));
+    overflow-x: hidden;
+    padding-top:100px ;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 12%;
+    padding: 0 6%;
+    background-color: var(--third);
+    backdrop-filter: blur(10px);
+    border-bottom-right-radius:25px ;
+    border-bottom-left-radius: 25px;
+    box-shadow:0px 0px 10px var(--third), 
+               0px 0px 30px var(--third),
+               0px 0px 60px var(--third);
+    z-index: 2000;
+}
+nav .logo a {
+    font-size: 40px;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--logo);
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+nav ul li a{
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    color: var(--logo);
+}
+i{
+  color: var(--logo);
+}
+
+
+
+
+
+
+.btn-menu{
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: none;
+
+}
+  
+
+
+.btn-menu span{
+  width: 40px;
+  height: 5px;
+  background-color: var(--primary);
+  display: block;
+  margin: 3px 0;
+  transition: all 0.3s ease-in-out;
+
+}
+
+
+
+
+.game{
+    height: 94%;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.startbox{
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px var(--primary) solid;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: var(--bg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 70%;
+    font-weight: bold;
+    font-size: 20px;
+}
+.rules ,.quitions{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px var(--primary) solid;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 70%;
+    font-weight: bold;
+    font-size: 20px;
+}
+.quitions{
+    text-align: center;
+}
+.rules .buttons button{
+    margin: 10px;
+}
+.startbox button,
+.quitions button,
+.rules button,
+#toggle-theme{
+    padding: 10px 25px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation: wiggle 2s linear infinite;
+}
+
+.time-step-titel{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.time-step-titel .title{
+    margin: 0 30px;
+}
+.quition .divqui{
+    border: var(--dark) solid 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin:10px 0;
+    padding: 10px;
+    transition: ease 0.3s;
+}
+.quition .divqui:hover{
+  background-color: var(--primary);
+}
+
+
+
+
+
+
+
+
+
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+
+
+footer{
+    height: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
+    position: fixed;
+    z-index: 100;
+}
+footer marquee{
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--logo);
+}
